@@ -8,7 +8,21 @@
   </head>
   <body>
     <main id="book">
-      <header><h1>My Contact Book</h1></header>
+      <header>
+        <h1>My Contact Book</h1>
+        <div class="color-picker">
+          <label>Choose your background color:</label>
+          <div>
+            <input
+              type="color"
+              class="color-input"
+              id="color-input"
+              name="color-input"
+              value="#e66465"
+            />
+          </div>
+        </div>
+      </header>
       <section id="filter">
         <form id="filterForm">
           <label for="filterOptions">Filter By City:</label>

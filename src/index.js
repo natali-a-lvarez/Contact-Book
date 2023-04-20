@@ -242,6 +242,14 @@ window.contacts = [
 // WRITE YOUR SOLUTION CODE HERE //
 ///////////////////////////////////
 
+// COLOR PICKER ADDED FUNCTIONALITY
+const colorPicker = document.querySelector(".color-input");
+const book = document.querySelector("#book");
+
+colorPicker.addEventListener("change", (e) => {
+  book.style.background = e.target.value;
+});
+
 const filterOptions = document.querySelector("#filterOptions");
 const contactsSection = document.querySelector("#contacts");
 

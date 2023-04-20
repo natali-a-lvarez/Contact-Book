@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,500&display=swap");
 
 body {
+  --dark-color: #1e1e1e;
+  --light-color: #f1f1f1;
+
   margin: 0;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
@@ -15,22 +18,22 @@ main {
 }
 
 #book {
-  background: -webkit-gradient(
-    linear,
-    right top,
-    left bottom,
-    from(#2d6120),
-    to(#bee6b4)
-  );
-  background: linear-gradient(to bottom left, #2d6120, #bee6b4);
-  background-size: 125% 125%;
-  color: #2d6120;
+  background-color: #c8558f;
+  color: #ffffff;
 }
 
 header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 95%;
   margin: 0 auto;
   max-width: 1200px;
+}
+
+header .color-input {
+  width: 100%;
+  height: 50px;
 }
 
 #filter {
@@ -47,6 +50,7 @@ header {
   margin: 20px auto;
   max-width: 1200px;
   box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 .divider {
@@ -62,15 +66,21 @@ header {
 
 .card {
   position: relative;
-  background: white;
-  box-shadow: 4px 8px 16px 0 #1b3b14;
+  background: rgb(255, 255, 255);
+  box-shadow: 4px 8px 16px 0 hwb(0 0% 100%, 0.2);
+  border-radius: 5px;
+}
+
+.card .name,
+.card .email {
+  color: #1e1e1e;
 }
 
 .card .deleteBtn {
   position: absolute;
   top: 2px;
   right: 2px;
-  border: solid 1px #2d6120;
+  border: solid 1px #3d0624;
   border-radius: 50%;
   cursor: pointer;
   width: 25px;
@@ -90,7 +100,6 @@ header {
   height: 70px;
   border-radius: 50%;
   cursor: pointer;
-  background: #bee6b4;
   margin: 10px auto;
   position: relative;
 }
@@ -108,14 +117,15 @@ header {
   top: -3px;
   width: 76px;
   height: 76px;
-  border-color: #2d6120 #2d6120 #2d6120 transparent;
+  border-color: var(--dark-color) var(--dark-color) var(--dark-color)
+    transparent;
 }
 .card .avatar .circle:nth-child(2) {
   left: -6px;
   top: -6px;
   width: 82px;
   height: 82px;
-  border-color: #2d6120 transparent #2d6120 #2d6120;
+  border-color: #3d0624 transparent #3d0624 #3d0624;
 }
 .card .avatar:hover .circle:first-child {
   -webkit-transform: rotate(360deg);
@@ -151,13 +161,14 @@ header {
   text-align: center;
   font-size: 12px;
   font-weight: 600;
-  color: #2d6120;
+  color: #3d0624;
 }
 
 .card .additional {
   position: relative;
   height: 100px;
-  background: #cfecc7;
+  background: #e4e4e4;
+  color: #3d0624;
   box-shadow: 0 -1px white;
   display: flex;
   font-size: 0.9rem;
